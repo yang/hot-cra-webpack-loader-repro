@@ -474,6 +474,11 @@ module.exports = function(webpackEnv) {
             // Make sure to add the new loader(s) before the "file" loader.
           ],
         },
+        {
+          test: /\.jsx?$/,
+          include: /node_modules/,
+          use: ['react-hot-loader/webpack'],
+        }
       ],
     },
     plugins: [
